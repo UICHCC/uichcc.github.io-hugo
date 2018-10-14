@@ -1,0 +1,6 @@
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+{{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+<title>{{block "title" .}}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ $.Site.Params.TitleEn }} ({{ $.Site.Params.TitleCn }})">
+<link rel="stylesheet" href="/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/dist/css/style.css">

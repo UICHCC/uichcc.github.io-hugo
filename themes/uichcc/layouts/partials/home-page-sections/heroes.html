@@ -1,0 +1,32 @@
+<section>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    {{ $HomepageHero := where .Site.RegularPages "Section" "heroes" }}
+    {{ if $HomepageHero }}
+    {{ template "home_heros_item" (index $HomepageHero 0) }}
+    {{ range $p := first 10 ($HomepageHero | after 1 | shuffle) }}
+    {{template "home_heros_item" $p }}
+    {{end}}
+    {{end}}
+  </div>
+
+</section>
+
+{{ define "home_heros_item" }}
+  {{ $img := (.Resources.ByType "image").GetMatch "*featured*" }}
+    {{ with $img }}
+    <div class="carousel-item active" style="background-image: url({{$img.RelPermalink}});">
+      <img class="first-slide" src="{{$img.RelPermalink}}" alt="Third slide">
+      <div class="container">
+        <div class="carousel-caption carousel-caption-dark d-none d-block text-left">
+          <h1>{{$.Title}}</h1>
+          <p>
+              {{$.Description}}
+          </p>
+          <p><a class="btn btn-primary" href="{{$.RelPermalink}}" role="button">Learn More</a></p>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+{{ end }}

@@ -1,0 +1,28 @@
+baseURL = "/"
+staticDir = "static"
+languageCode = "en-us"
+title = "UIC HCC Computer Club | 计算机俱乐部"
+theme = "uichcc"
+
+[params]
+  TitleEn = "UIC HCC Computer Club"
+  TitleCN = "HCC 计算机俱乐部"
+
+  description = "An independent interest club in Beijing Normal University – Hong Kong Baptist University United International College."
+  release = "0.49.2"
+  ## Setting this to true will add a "noindex" to *EVERY* page on the site
+  removefromexternalsearch = false
+  ## Gh repo for site footer (include trailing slash)
+  ghrepo = "https://github.com/gohugoio/hugoDocs/"
+  ## GH Repo for filing a new issue
+  github_repo = "https://github.com/gohugoio/hugo/issues/new"
+  ### Edit content repo (set to automatically enter "edit" mode; this is good for "improve this page" links)
+  ghdocsrepo = "https://github.com/gohugoio/hugoDocs/tree/master/docs"
+  ## Gitter URL
+  gitter = "https://gitter.im/spf13/hugo"
+  ## Discuss Forum URL
+  forum = "https://discourse.gohugo.io/"
+  ## Google Tag Manager
+  gtmid = ""
+
+  flex_box_interior_classes = "flex-auto w-100 w-40-l mr3 mb3 bg-white ba b--moon-gray nested-copy-line-height"
